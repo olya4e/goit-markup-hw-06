@@ -386,9 +386,23 @@
                     </li>
                 </ul>
             
-            </div>     
+            </div> 
+            <form class="subscribe-form-footer">
+                <span class="subscribe-form-title-footer">Подпишитесь на рассылку</span>
+                <label class="subscribe-form-field-footer">
+                    <input class="subscribe-form-input-footer" type="email" name="user_email" required placeholder="E-mail">
+                    <span class="subscribe-form-submit-wrapper">
+                        <button class="subscribe-form-submit" type="submit">Подписаться</button>
+                        <svg class="subscribe-form-submit-icon">
+                            <use  href="./images/sprite.svg#icon-icon-send"></use>
+                        </svg>
+                    </span>
+                </label>
+            </form>    
         </div>
     </footer>
+
+    <!-- модальное окно -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button class="modal-close-btn" data-modal-close>
@@ -396,6 +410,57 @@
                     <use href="./images/sprite.svg#icon-close-btn"></use>
                 </svg>
             </button>
+
+            <form class="contact-form">
+                <p class="contact-form-title">Оставьте свои данные, мы вам перезвоним</p>
+
+                <label class="contact-form-field">
+                    <span class="contact-form-desc">Имя</span>
+                    <span class="contact-form-input-wraper">
+                    <input type="text" class="contact-form-input" name="user_name" required minlength="2" pattern="^[a-zA-Zа-яА-я]+$">
+                    <svg class="contact-form-icon">
+                        <use href="./images/sprite.svg#icon-person-black"></use>
+                    </svg>
+                    </span>
+                </label>
+
+                <label class="contact-form-field">
+                    <span class="contact-form-desc">Телефон</span>
+                    <span class="contact-form-input-wraper">
+                    <input type="tel" class="contact-form-input" name="user_phone_number" required
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="xxx-xxx-xx-xx">
+                        <svg class="contact-form-icon">
+                            <use href="./images/sprite.svg#icon-phone-black"></use>
+                        </svg>
+                    </span>
+                    
+                </label>
+
+                <label class="contact-form-field">
+                    <span class="contact-form-desc">Почта</span>
+                    <span class="contact-form-input-wraper">
+                    <input type="email" class="contact-form-input" name="user_email" required>
+                    <svg class="contact-form-icon">
+                        <use href="./images/sprite.svg#icon-email-black"></use>
+                    </svg>
+                    </span>
+                    
+                </label>
+                <label class="contact-form-field">
+                    <span class="contact-form-desc">Комментарий</span>
+                    <textarea class="contact-form-message" name="user_massage"placeholder="Введите текст"></textarea>
+                </label>
+
+                <input
+                id="user-policy" 
+                type="checkbox" 
+                class="contact-form-checkbox visibility-hidden" 
+                name="user_policy">
+                <label for="user-policy" class="contact-form-checkbox-desc">Соглашаюсь с рассылкой и принимаю <a class="contact-form-checkbox-link" href="">Условия договора</a>
+                </label>
+
+                <button type="submite" class="contact-form-submit">Отправить</button>
+            </form>
         </div>
     </div>
     <script src="./jc/modal.js"></script>
