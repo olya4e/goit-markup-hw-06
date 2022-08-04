@@ -28,6 +28,9 @@ img {
     padding: 0;
     margin: 0;
 }
+button{
+    cursor: pointer;
+}
 
 
 
@@ -206,7 +209,6 @@ img {
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
-    cursor: pointer;
     transition: background-color var(--transition-dur-func);
 }
 .button.main:hover{
@@ -224,7 +226,6 @@ img {
     font-size: 16px;
     line-height: 1.62;
     letter-spacing: 0.03em;
-    cursor: pointer;
     transition: color var(--transition-dur-func), background-color var(--transition-dur-func);
 
 }
@@ -676,7 +677,6 @@ address {
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    cursor: pointer;
     transition: var(--transition-dur-func);
     
 }
@@ -694,7 +694,18 @@ address {
     padding: 12px 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    font-family: 'Roboto';
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.8);
     transform: var(--transition-dur-func);
+
+}
+.contact-form-message::placeholder{
+    font-family: 'Roboto';
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
 }
 .contact-form-message:focus{
     outline: transparent;
@@ -707,23 +718,42 @@ address {
     margin-top: 20px;
     margin-bottom: 30px;
     line-height: 1.71;
+    font-family: 'Roboto';
+        letter-spacing: 0.03em;
+  
 }
-.contact-form-checkbox-desc::before{
+.contact-form-checkbox-icon-wrapper{
+    position: relative;
     display: block;
-    content:"";
+    content: "";
     width: 16px;
     height: 15px;
     border: 2px solid #212121;
     border-radius: 2px;
+    transition: var(--transition-dur-func);
 }
-.contact-form-checkbox:checked + .contact-form-checkbox-desc::before{
-    background-color: transparent;
+.contact-form-checkbox-icon{
+position: absolute;
+top: 50%;
+left: 2px;
+width: 11px;
+height: 8px;
+transform: translateY(-50%);
+fill: var(--primary-white-color);
+
+
+}
+
+.contact-form-checkbox:checked + .contact-form-checkbox-icon-wrapper{
+    background-color: var(--accent-color);
     border: transparent;
-    background-image: url(.././images/icon-check.jpg);
-    background-size: contain;
+    transition: var(--transition-dur-func);
+    
 }
 .contact-form-checkbox-link{
     color: var(--accent-color);
+    font-family: 'Roboto';
+        letter-spacing: 0.03em;
 }
 .contact-form-submit{
     display: block;
